@@ -31,19 +31,21 @@ android {
     }
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.snixxy.authlib'
-            artifactId = 'authlib'
-            version = '1.0'
-
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.PocketGates'
+                artifactId = 'authlib'
+                version = '1.0'
                 from components.release
             }
         }
     }
 }
+
+group = 'com.github.PocketGates'
+version = '1.0'
 
 dependencies {
 
